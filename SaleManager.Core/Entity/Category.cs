@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SaleManagerment_WPF.ServiceManager
+namespace SaleManager.Core.Entity
 {
-    public class MemberService
+    public class Category
     {
+        public int Id { get; set; }
     }
 }

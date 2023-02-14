@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SaleManager.Core.Configuration
 {
-    internal class MemberConfiguration : IEntityTypeConfiguration<Member>
+    public class MemberConfiguration : IEntityTypeConfiguration<Member>
     {
         public void Configure(EntityTypeBuilder<Member> builder)
         {

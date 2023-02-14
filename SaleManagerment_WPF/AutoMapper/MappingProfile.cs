@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SaleManagerment_WPF.AutoMapper
 {
-    internal class MappingProfile : Profile
+    public class MappingProfile : Profile
     {
         public MappingProfile()
         {

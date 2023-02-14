@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SaleManagerment_WPF.Model
+namespace SaleManager.Core.ModelCore
 {
     internal class MemberDto
     {

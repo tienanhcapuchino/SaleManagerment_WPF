@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SaleManager.Core.Entity
 {
-    internal class Order
+    public class Order
     {
         public int Id { get; set; }
         public Member MemberMember { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SaleManagerment_WPF.Model
 {
-    internal class MemberDto
+    public class MemberDto
     {
     }
 }
