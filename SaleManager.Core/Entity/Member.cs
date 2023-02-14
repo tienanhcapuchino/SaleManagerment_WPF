@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SaleManagerment_WPF.Entity
+namespace SaleManager.Core.Entity
 {
     internal class Member
     {
@@ -12,6 +12,7 @@ namespace SaleManagerment_WPF.Entity
         public string Name { get; set; }
         public string Email { get; set; }
         public string City { get; set; }
-
+        public string Country  { get; set; }
+        public string Password { get; set; }
     }
 }

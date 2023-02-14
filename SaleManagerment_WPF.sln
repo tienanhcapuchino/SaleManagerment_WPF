@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaleManagerment_WPF", "SaleManagerment_WPF\SaleManagerment_WPF.csproj", "{48A85E4C-39E1-4590-A08A-97BE46726085}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaleManager.Core", "SaleManager.Core\SaleManager.Core.csproj", "{1D10179A-5D98-4DF8-8E4D-4A99193E29E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{48A85E4C-39E1-4590-A08A-97BE46726085}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48A85E4C-39E1-4590-A08A-97BE46726085}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48A85E4C-39E1-4590-A08A-97BE46726085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D10179A-5D98-4DF8-8E4D-4A99193E29E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D10179A-5D98-4DF8-8E4D-4A99193E29E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D10179A-5D98-4DF8-8E4D-4A99193E29E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D10179A-5D98-4DF8-8E4D-4A99193E29E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

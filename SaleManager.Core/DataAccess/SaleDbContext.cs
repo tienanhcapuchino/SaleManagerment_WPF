@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SaleManagerment_WPF.DataAccess
+namespace SaleManager.Core.DataAccess
 {
     internal class SaleDbContext : DbContext
     {
