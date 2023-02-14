@@ -19,10 +19,4 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DataAccess\" />
-    <Folder Include="Model\" />
-    <Folder Include="ServiceManager\" />
-  </ItemGroup>
-
 </Project>
