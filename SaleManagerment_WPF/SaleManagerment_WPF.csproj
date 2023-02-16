@@ -18,11 +18,13 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SaleManager.Core\SaleManager.Core.csproj" />
+    <ProjectReference Include="..\SaleManagerDataAcess\SaleManagerDataAcess.csproj" />
+    <ProjectReference Include="..\SaleManagerLibrary\SaleManagerLibrary.csproj" />
   </ItemGroup>
 
 </Project>
