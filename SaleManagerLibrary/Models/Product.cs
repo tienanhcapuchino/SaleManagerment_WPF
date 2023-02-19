@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SaleManagerLibrary.Models
+namespace BusinessObject.Models
 {
     public partial class Product
     {

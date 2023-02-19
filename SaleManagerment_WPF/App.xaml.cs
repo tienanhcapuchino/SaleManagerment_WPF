@@ -1,5 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using SaleManagerDataAcess.Repository;
+﻿using DataAcess.Repository;
+using Microsoft.Extensions.DependencyInjection;
+using DataAcess.Repository;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -25,8 +26,8 @@ namespace SaleManagerment_WPF
         }
         private void ConfigureServices(ServiceCollection services)
         {
-            //services.AddSingleton(typeof(ICarRepository), typeof(CarRepository));
-            //services.AddSingleton<WindowCarManagement>();
+            services.AddSingleton(typeof(IMemberRepository), typeof(MemberRepository));
+            services.AddSingleton<MainWindow>();
         }
         private void OnStartup(object sender, StartupEventArgs e)
         {

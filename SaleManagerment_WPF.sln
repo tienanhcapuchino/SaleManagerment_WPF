@@ -5,9 +5,9 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaleManagerment_WPF", "SaleManagerment_WPF\SaleManagerment_WPF.csproj", "{48A85E4C-39E1-4590-A08A-97BE46726085}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaleManagerLibrary", "SaleManagerLibrary\SaleManagerLibrary.csproj", "{A92CD6DE-ADFD-44C1-BDE8-F9C05668C558}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObject", "SaleManagerLibrary\BusinessObject.csproj", "{A92CD6DE-ADFD-44C1-BDE8-F9C05668C558}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaleManagerDataAcess", "SaleManagerDataAcess\SaleManagerDataAcess.csproj", "{B9EF7736-F7B1-4687-9175-679E46E5F646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAcess", "SaleManagerDataAcess\DataAcess.csproj", "{B9EF7736-F7B1-4687-9175-679E46E5F646}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

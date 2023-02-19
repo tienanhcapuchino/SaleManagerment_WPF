@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAcess.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,27 @@ namespace SaleManagerment_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        IMemberRepository _memberRepository;
+        public MainWindow(IMemberRepository memberRepository)
         {
             InitializeComponent();
+            _memberRepository = memberRepository;
+        }
+
+        private void dtbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        public void LoadData(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dtbMembers.ItemsSource = _memberRepository.GetAllMembers();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

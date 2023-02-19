@@ -23,8 +23,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SaleManagerDataAcess\SaleManagerDataAcess.csproj" />
-    <ProjectReference Include="..\SaleManagerLibrary\SaleManagerLibrary.csproj" />
+    <ProjectReference Include="..\SaleManagerDataAcess\DataAcess.csproj" />
+    <ProjectReference Include="..\SaleManagerLibrary\BusinessObject.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

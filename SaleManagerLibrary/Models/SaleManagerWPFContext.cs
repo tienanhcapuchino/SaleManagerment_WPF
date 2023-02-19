@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
 
-namespace SaleManagerLibrary.Models
+namespace BusinessObject.Models
 {
     public partial class SaleManagerWPFContext : DbContext
     {

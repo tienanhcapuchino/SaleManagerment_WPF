@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <DataGrid x:Name="dtbMembers" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="dtbMembers_SelectionChanged" Loaded="LoadData" Margin="0,0,300,241"/>
 
     </Grid>
 </Window>
