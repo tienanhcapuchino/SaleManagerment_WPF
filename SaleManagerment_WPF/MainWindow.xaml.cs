@@ -37,6 +37,14 @@ namespace SaleManagerment_WPF
             try
             {
                 dtbMembers.ItemsSource = _memberRepository.GetAllMembers();
+                //App app = new App();
+                var user = App.Admin.Username;
+                var pass = App.Admin.Password;
+                if (user != null && pass != null)
+                {
+                    lbPassword.Content = pass;
+                    lbUserName.Content = user;
+                }
             }
             catch (Exception ex)
             {
