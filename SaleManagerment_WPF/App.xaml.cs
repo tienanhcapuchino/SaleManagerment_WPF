@@ -4,6 +4,7 @@ using System.Windows;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using SaleManagerment_WPF.Model;
+using AutoMapper;
 
 namespace SaleManagerment_WPF
 {
@@ -24,6 +25,7 @@ namespace SaleManagerment_WPF
         private void ConfigureServices(ServiceCollection services)
         {
             services.AddSingleton(typeof(IMemberRepository), typeof(MemberRepository));
+            services.AddSingleton(typeof(IOrderRepository), typeof(OrderRepository));
             services.AddSingleton<MainWindow>();
         }
         private void OnStartup(object sender, StartupEventArgs e)

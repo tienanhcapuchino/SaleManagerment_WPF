@@ -9,9 +9,12 @@ namespace DataAcess.Repository
 {
     public interface IMemberRepository
     {
-        Task<bool> CreateMember(Member model);
-        Task<bool> UpdateMember(Member model);
+        bool CreateMember(Member model);
+        bool UpdateMember(Member model);
         List<Member> GetAllMembers();
         Member GetById(int id);
+        bool UserLogged(UserDto model);
+        bool IsEmailExist(string email, int id);
+        Member FindByEmail(string email);
     }
 }

@@ -1,0 +1,28 @@
+﻿<Window x:Class="SaleManagerment_WPF.ProfileUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SaleManagerment_WPF"
+        mc:Ignorable="d"
+        Title="ProfileUser" Height="450" Width="800"
+        Loaded="Window_Load"
+        >
+    <Grid>
+        <Label Content="User profile" HorizontalAlignment="Left" Margin="45,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.667,-0.011"/>
+        <Label Content="Order history" HorizontalAlignment="Left" Margin="406,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.437,-0.204"/>
+        <TextBox HorizontalAlignment="Left" Margin="81,75,0,0" TextWrapping="Wrap" Text="" Name="tbEmail" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="19,71,0,0" VerticalAlignment="Top"/>
+        <Label Content="CompanyName" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="107,106,0,0" TextWrapping="Wrap" Name="tbComName" Text="" VerticalAlignment="Top" Width="94"/>
+        <Label Content="City" HorizontalAlignment="Left" Margin="19,133,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.097,0.315"/>
+        <TextBox HorizontalAlignment="Left" Margin="81,137,0,0" TextWrapping="Wrap" Name="tbCity" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Country" HorizontalAlignment="Left" Margin="15,164,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="81,168,0,0" TextWrapping="Wrap" Name="tbCountry" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="10,199,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="81,203,0,0" TextWrapping="Wrap" Text="" Name="tbPassword" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Save your profile" HorizontalAlignment="Left" Margin="94,250,0,0" Name="btUpdateProfile" VerticalAlignment="Top" Click="btUpdateProfile_Click"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="284,66,31,85" Name="dtgOrders"/>
+
+    </Grid>
+</Window>
