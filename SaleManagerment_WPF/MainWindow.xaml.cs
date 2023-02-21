@@ -22,13 +22,18 @@ namespace SaleManagerment_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        IMemberRepository _memberRepository;
-        IOrderRepository _orderRepository;
-        public MainWindow(IMemberRepository memberRepository, IOrderRepository orderRepository)
+        private readonly IMemberRepository _memberRepository;
+        private readonly IOrderRepository _orderRepository;
+        private readonly IProductRepository _productRepository;
+
+        public MainWindow(IMemberRepository memberRepository, 
+            IOrderRepository orderRepository, 
+            IProductRepository productRepository)
         {
             InitializeComponent();
             _memberRepository = memberRepository;
             _orderRepository = orderRepository;
+            _productRepository = productRepository;
         }
 
         private void dtbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -64,16 +69,16 @@ namespace SaleManagerment_WPF
                 Username = username,
                 Password = password
             };
+            Member mem = _memberRepository.FindByEmail(username);
             if (_memberRepository.UserLogged(us))
             {
-                Member mem = _memberRepository.FindByEmail(username);
                 ProfileUser profile = new ProfileUser(_memberRepository, _orderRepository, mem);
                 profile.Show();
                 this.Hide();
             }
             else if (App.Admin.Username == username && App.Admin.Password == password)
             {
-                ManagermentCRUD manager = new ManagermentCRUD();
+                ManagermentCRUD manager = new ManagermentCRUD(_memberRepository, _orderRepository, _productRepository, username);
                 manager.Show();
                 this.Hide();
             }

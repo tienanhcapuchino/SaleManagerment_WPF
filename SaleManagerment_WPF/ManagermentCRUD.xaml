@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SaleManagerment_WPF"
         mc:Ignorable="d"
-        Title="ManagermentCRUD" Height="450" Width="800">
+        Title="ManagermentCRUD" Height="450" Width="800"
+        Loaded="Manager_Window_Load"
+        >
     <Grid>
-        
+        <Label Content="" Name="lbWelcome" HorizontalAlignment="Left" Margin="34,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.093,-1.198"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Name="dtgProducts" Margin="16,162,174,55"/>
+        <Label Content="Id
+               " HorizontalAlignment="Left" Margin="11,119,0,0" VerticalAlignment="Top" Width="23"/>
+        <TextBox HorizontalAlignment="Left" Margin="39,123,0,0" TextWrapping="Wrap" Name="searchId" Text="" VerticalAlignment="Top" Width="32"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="79,119,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="133,123,0,0" TextWrapping="Wrap" Name="searchName" VerticalAlignment="Top" Width="70"/>
+        <Label Content="UnitPrice" HorizontalAlignment="Left" Margin="213,119,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="276,123,0,0" TextWrapping="Wrap" Name="searchUnitPrice" VerticalAlignment="Top" Width="55"/>
+        <Label Content="UnitInStocks" HorizontalAlignment="Left" Margin="337,119,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="418,123,0,0" TextWrapping="Wrap" Name="searchUnitInStocks" VerticalAlignment="Top" Width="57"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="517,122,0,0" VerticalAlignment="Top" Name="bt_SearchProduct" Click="bt_SearchProduct_Click"/>
+        <Button Content="MemberManagerment" HorizontalAlignment="Left" Name="bt_MemberManagerment" Margin="186,65,0,0" VerticalAlignment="Top" Click="bt_MemberManagerment_Click"/>
+        <Button Content="OrderManagerment" Name="bt_OrderMangerment" HorizontalAlignment="Left" Margin="394,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.917,-0.906" Click="bt_OrderMangerment_Click"/>
+
     </Grid>
 </Window>

@@ -24,7 +24,9 @@ namespace SaleManagerment_WPF
         private readonly IMemberRepository _memberRepsitory;
         private readonly IOrderRepository _orderRepsitory;
         private readonly Member CurrentUser;
-        public ProfileUser(IMemberRepository memberRepository, IOrderRepository orderRepository, Member member)
+        public ProfileUser(IMemberRepository memberRepository, 
+            IOrderRepository orderRepository, 
+            Member member)
         {
             _memberRepsitory = memberRepository;
             _orderRepsitory = orderRepository;
@@ -80,7 +82,9 @@ namespace SaleManagerment_WPF
                 tbComName.Text = CurrentUser.CompanyName.ToString();
                 tbCountry.Text = CurrentUser.Country.ToString();
                 tbCity.Text = CurrentUser.City.ToString();
-                dtgOrders.ItemsSource = _orderRepsitory.GetByMemberId(CurrentUser.MemberId);
+                var listOrders = _orderRepsitory.GetByMemberId(CurrentUser.MemberId);
+                if (listOrders != null && listOrders.Any()) 
+                    dtgOrders.ItemsSource = listOrders;
             }
             catch (Exception ex)
             {

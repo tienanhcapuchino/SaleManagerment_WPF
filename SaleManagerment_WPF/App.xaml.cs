@@ -26,6 +26,7 @@ namespace SaleManagerment_WPF
         {
             services.AddSingleton(typeof(IMemberRepository), typeof(MemberRepository));
             services.AddSingleton(typeof(IOrderRepository), typeof(OrderRepository));
+            services.AddSingleton(typeof(IProductRepository), typeof(ProductRepository));
             services.AddSingleton<MainWindow>();
         }
         private void OnStartup(object sender, StartupEventArgs e)
