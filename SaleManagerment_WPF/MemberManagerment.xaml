@@ -5,9 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SaleManagerment_WPF"
         mc:Ignorable="d"
-        Title="MemberManagerment" Height="450" Width="800">
+        Title="MemberManagerment" Height="450" Width="800"
+        Loaded="Load_Members"
+        >
     <Grid>
-        <Label Content="Member Managerment" HorizontalAlignment="Left" Margin="62,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.963,-0.322"/>
+        <Label Content="" Name="lbWelcome" HorizontalAlignment="Left" Margin="34,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.093,-1.198"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Name="dtgMember" Margin="310,172,60,45" SelectionChanged="dtgMember_SelectionChanged"/>
+        <Label Content="Email
+               " HorizontalAlignment="Left" Margin="16,172,0,0" VerticalAlignment="Top" Width="44"/>
+        <TextBox HorizontalAlignment="Left" Margin="60,176,0,0" TextWrapping="Wrap" Name="tbEmail" Text="" VerticalAlignment="Top" Width="116"/>
+        <Label Content="Country" HorizontalAlignment="Left" Margin="13,0,0,0" VerticalAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Margin="75,0,0,0" TextWrapping="Wrap" Name="tbCountry" VerticalAlignment="Center" Width="70"/>
+        <Label Content="City" HorizontalAlignment="Left" Margin="21,241,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="65,245,0,0" TextWrapping="Wrap" Name="tbCity" VerticalAlignment="Top" Width="55"/>
+        <Label Content="CompanyName" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="107,280,0,0" TextWrapping="Wrap" Name="tbCompany" VerticalAlignment="Top" Width="57"/>
+        <Button Content="ProductManagerment" HorizontalAlignment="Left" Name="bt_ProducrManagerment" Margin="304,25,0,0" VerticalAlignment="Top" Click="bt_MemberManagerment_Click" RenderTransformOrigin="0.776,-1.718"/>
+        <Button Content="OrderManagerment" Name="bt_OrderMangerment" HorizontalAlignment="Left" Margin="448,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.917,-0.906" Click="bt_OrderMangerment_Click"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="17,309,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="95,309,0,0" TextWrapping="Wrap" Name="tbPassword" Text="" VerticalAlignment="Top" Width="60"/>
+        <Button Content="Add" Name="bt_AddMem" HorizontalAlignment="Left" Margin="28,379,0,0" VerticalAlignment="Top" Click="bt_AddMem_Click"/>
+        <Button Content="Update" Name="bt_UpdateMem" HorizontalAlignment="Left" Margin="85,379,0,0" VerticalAlignment="Top" Click="bt_UpdateMem_Click"/>
+        <Button Content="Delete" Name="bt_DeleteMem" HorizontalAlignment="Left" Margin="151,379,0,0" VerticalAlignment="Top" Click="bt_DeleteMem_Click"/>
+        <TextBox HorizontalAlignment="Left" Margin="60,149,0,0" TextWrapping="Wrap" Name="tbId" Visibility="Hidden" Text="" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

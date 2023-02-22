@@ -21,5 +21,6 @@ namespace DataAcess.Repository
         public bool UserLogged(UserDto model) => MemberManagerment.Instance.UserLogged(model);
         public bool IsEmailExist(string email, int id) => MemberManagerment.Instance.IsEmailExist(email, id);
         public Member FindByEmail(string email) => MemberManagerment.Instance.FindByEmail(email);
+        public bool DeleteUser(int id) => MemberManagerment.Instance.DeleteUser(id);
     }
 }

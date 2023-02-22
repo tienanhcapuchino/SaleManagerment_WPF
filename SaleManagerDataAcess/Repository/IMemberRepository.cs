@@ -16,5 +16,6 @@ namespace DataAcess.Repository
         bool UserLogged(UserDto model);
         bool IsEmailExist(string email, int id);
         Member FindByEmail(string email);
+        bool DeleteUser(int id);
     }
 }

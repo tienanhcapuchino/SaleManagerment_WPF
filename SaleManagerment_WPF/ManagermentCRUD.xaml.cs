@@ -68,7 +68,7 @@ namespace SaleManagerment_WPF
 
         private void bt_OrderMangerment_Click(object sender, RoutedEventArgs e)
         {
-            OrderManagerment order = new OrderManagerment();
+            OrderManagerment order = new OrderManagerment(_memberRepository, _orderRepository, _productRepository, _username);
             order.Show();
             this.Hide();
         }

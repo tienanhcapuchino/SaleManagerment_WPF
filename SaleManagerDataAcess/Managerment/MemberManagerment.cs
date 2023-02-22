@@ -31,7 +31,12 @@ namespace DataAcess.Managerment
         }
         public bool CreateMember(Member model)
         {
-            throw new NotImplementedException();
+            using (var context = new SaleManagerWPFContext())
+            {
+                context.Members.Add(model);
+                context.SaveChanges();
+                return true;
+            }
         }
         public List<Member> GetAllMembers()
         {
@@ -97,6 +102,20 @@ namespace DataAcess.Managerment
             {
                 var user = context.Members.Where(x => x.Email == email).FirstOrDefault();
                 return user;
+            }
+        }
+        public bool DeleteUser(int id)
+        {
+            using (var context = new SaleManagerWPFContext())
+            {
+                var user = context.Members.Where(x => x.MemberId == id).FirstOrDefault();
+                if (user != null)
+                {
+                    context.Members.Remove(user);
+                    context.SaveChanges();
+                    return true;
+                }
+                return false;
             }
         }
     }
