@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAcess.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,19 @@ namespace SaleManagerment_WPF
     /// </summary>
     public partial class MemberManagerment : Window
     {
-        public MemberManagerment()
+        private readonly IMemberRepository _memberRepository;
+        private readonly IOrderRepository _orderRepository;
+        private readonly IProductRepository _productRepository;
+        private readonly string _username;
+        public MemberManagerment(IMemberRepository memberRepository,
+            IOrderRepository orderRepository,
+            IProductRepository productRepository,
+            string currentUser)
         {
+            _memberRepository = memberRepository;
+            _orderRepository = orderRepository;
+            _productRepository = productRepository;
+            _username = currentUser;
             InitializeComponent();
         }
     }

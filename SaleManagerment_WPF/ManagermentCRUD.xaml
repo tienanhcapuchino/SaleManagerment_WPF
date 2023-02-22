@@ -10,19 +10,29 @@
         >
     <Grid>
         <Label Content="" Name="lbWelcome" HorizontalAlignment="Left" Margin="34,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.093,-1.198"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Name="dtgProducts" Margin="16,162,174,55"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Name="dtgProducts" Margin="310,172,174,55" SelectionChanged="dtgProducts_SelectionChanged"/>
         <Label Content="Id
-               " HorizontalAlignment="Left" Margin="11,119,0,0" VerticalAlignment="Top" Width="23"/>
-        <TextBox HorizontalAlignment="Left" Margin="39,123,0,0" TextWrapping="Wrap" Name="searchId" Text="" VerticalAlignment="Top" Width="32"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="79,119,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="133,123,0,0" TextWrapping="Wrap" Name="searchName" VerticalAlignment="Top" Width="70"/>
-        <Label Content="UnitPrice" HorizontalAlignment="Left" Margin="213,119,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="276,123,0,0" TextWrapping="Wrap" Name="searchUnitPrice" VerticalAlignment="Top" Width="55"/>
-        <Label Content="UnitInStocks" HorizontalAlignment="Left" Margin="337,119,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="418,123,0,0" TextWrapping="Wrap" Name="searchUnitInStocks" VerticalAlignment="Top" Width="57"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="517,122,0,0" VerticalAlignment="Top" Name="bt_SearchProduct" Click="bt_SearchProduct_Click"/>
-        <Button Content="MemberManagerment" HorizontalAlignment="Left" Name="bt_MemberManagerment" Margin="186,65,0,0" VerticalAlignment="Top" Click="bt_MemberManagerment_Click"/>
-        <Button Content="OrderManagerment" Name="bt_OrderMangerment" HorizontalAlignment="Left" Margin="394,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.917,-0.906" Click="bt_OrderMangerment_Click"/>
+               " HorizontalAlignment="Left" Margin="16,172,0,0" VerticalAlignment="Top" Width="23"/>
+        <TextBox HorizontalAlignment="Left" Margin="44,176,0,0" TextWrapping="Wrap" Name="searchId" Text="" VerticalAlignment="Top" Width="32"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="13,0,0,0" VerticalAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Margin="60,0,0,0" TextWrapping="Wrap" Name="searchName" VerticalAlignment="Center" Width="70"/>
+        <Label Content="UnitPrice" HorizontalAlignment="Left" Margin="2,241,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="65,245,0,0" TextWrapping="Wrap" Name="searchUnitPrice" VerticalAlignment="Top" Width="55"/>
+        <Label Content="UnitInStocks" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="91,276,0,0" TextWrapping="Wrap" Name="searchUnitInStocks" VerticalAlignment="Top" Width="57"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="162,174,0,0" VerticalAlignment="Top" Name="bt_SearchId" Click="bt_SearchId_Click"/>
+        <Button Content="MemberManagerment" HorizontalAlignment="Left" Name="bt_MemberManagerment" Margin="304,25,0,0" VerticalAlignment="Top" Click="bt_MemberManagerment_Click" RenderTransformOrigin="0.776,-1.718"/>
+        <Button Content="OrderManagerment" Name="bt_OrderMangerment" HorizontalAlignment="Left" Margin="448,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.917,-0.906" Click="bt_OrderMangerment_Click"/>
+        <Label Content="CategoryId" HorizontalAlignment="Left" Margin="17,309,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="95,309,0,0" TextWrapping="Wrap" Name="tbCate" Text="" VerticalAlignment="Top" Width="60"/>
+        <Label Content="Weight" HorizontalAlignment="Left" Margin="13,340,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.442,1.119"/>
+        <TextBox HorizontalAlignment="Left" Margin="75,344,0,0" TextWrapping="Wrap" Name="tbWeight" Text="" VerticalAlignment="Top" Width="89"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="162,0,0,0" Name="bt_SearchName" VerticalAlignment="Center" Click="bt_SearchName_Click"/>
+        <Button Content="Search" Name="bt_SearchPrice" HorizontalAlignment="Left" Margin="162,241,0,0" VerticalAlignment="Top" Click="bt_SearchPrice_Click"/>
+        <Button Content="Search" Name="bt_SearchStock" HorizontalAlignment="Left" Margin="171,276,0,0" VerticalAlignment="Top" Click="bt_SearchStock_Click"/>
+        <Button Content="Add" Name="bt_AddPro" HorizontalAlignment="Left" Margin="28,379,0,0" VerticalAlignment="Top" Click="bt_AddPro_Click"/>
+        <Button Content="Update" Name="bt_UpdatePro" HorizontalAlignment="Left" Margin="85,379,0,0" VerticalAlignment="Top" Click="bt_UpdatePro_Click"/>
+        <Button Content="Delete" Name="bt_DeletePro" HorizontalAlignment="Left" Margin="151,379,0,0" VerticalAlignment="Top" Click="bt_DeletePro_Click"/>
 
     </Grid>
 </Window>

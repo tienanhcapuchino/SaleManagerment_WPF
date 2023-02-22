@@ -1,6 +1,7 @@
 ﻿using BusinessObject.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,37 +35,74 @@ namespace DataAcess.Managerment
                 return context.Products.ToList();
             }
         }
-        public List<Product> SearchProduct(int? id, string name, int? unitPrice, int? unitStocks)
+        public List<Product> SearchProductById(int id)
         {
             using (var context = new SaleManagerWPFContext())
             {
-                List<Product> products = new List<Product>();
-                if (id != null)
+                return context.Products.Where(x => x.ProductId == id).ToList();
+            }
+        }
+        public List<Product> SearchProductByName(string name)
+        {
+            using (var context = new SaleManagerWPFContext())
+            {
+                return context.Products.Where(x => x.ProductName.Contains(name)).ToList();
+            }
+        }
+        public List<Product> SearchProductByPrice(int price)
+        {
+            using (var context = new SaleManagerWPFContext())
+            {
+                return context.Products.Where(x => x.UnitPrice == price).ToList();
+            }
+        }
+        public List<Product> SearchProductByStocks(int stocks)
+        {
+            using (var context = new SaleManagerWPFContext())
+            {
+                return context.Products.Where(x => x.UnitsInStock == stocks).ToList();
+            }
+        }
+        public bool AddNewProduct(Product product)
+        {
+            using (var context = new SaleManagerWPFContext())
+            {
+                context.Products.Add(product);
+                context.SaveChanges();
+                return true;
+            }
+        }
+        public bool UpdateProduct(Product product)
+        {
+            using (var context = new SaleManagerWPFContext())
+            {
+                var entity = context.Products.Where(x => x.ProductId == product.ProductId).FirstOrDefault();
+                if (entity != null)
                 {
-                    products = context.Products.Where(x => x.ProductId == id).ToList();
+                    entity.ProductName = product.ProductName;
+                    entity.UnitPrice = product.UnitPrice;
+                    entity.UnitsInStock = product.UnitsInStock;
+                    entity.Weight = product.Weight;
+                    entity.CategoryId = product.CategoryId;
+                    context.Products.Update(entity);
+                    context.SaveChanges();
+                    return true;
                 }
-                if (name != null)
+                return false;
+            }
+        }
+        public bool DeleteProduct(int productId)
+        {
+            using (var context = new SaleManagerWPFContext())
+            {
+                var product = context.Products.Where(x => x.ProductId == productId).FirstOrDefault();
+                if (product != null)
                 {
-                    products = products.Where(x => x.ProductName.Contains(name)).ToList();
+                    context.Products.Remove(product);
+                    context.SaveChanges();
+                    return true;
                 }
-                if (unitPrice != null)
-                {
-                    products = products.Where(x => x.UnitPrice == unitPrice).ToList();
-                }
-                if (unitStocks != null)
-                {
-                    products = products.Where(x => x.UnitsInStock == unitStocks).ToList();
-                }
-                //else
-                //{
-
-                //    products = context.Products
-                //        .Where(x => x.ProductName.Contains(name)
-                //    && x.UnitPrice == unitPrice
-                //    && x.UnitsInStock == unitStocks)
-                //        .ToList();
-                //}
-                return products;
+                return false;
             }
         }
     }

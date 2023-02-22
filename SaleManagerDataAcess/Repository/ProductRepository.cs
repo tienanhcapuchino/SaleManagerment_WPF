@@ -11,6 +11,15 @@ namespace DataAcess.Repository
     public class ProductRepository : IProductRepository
     {
         public List<Product> GetAllProducts() => ProductManagerment.Instance.GetAllProducts();
-        public List<Product> SearchProduct(int? id, string name, int? unitPrice, int? unitStocks) => ProductManagerment.Instance.SearchProduct(id, name, unitPrice, unitStocks);
+        public List<Product> SearchProductById(int id) => ProductManagerment.Instance.SearchProductById(id);
+
+        public List<Product> SearchProductByName(string name) => ProductManagerment.Instance.SearchProductByName(name);
+
+        public List<Product> SearchProductByPrice(int price) => ProductManagerment.Instance.SearchProductByPrice(price);
+
+        public List<Product> SearchProductByStocks(int stocks) => ProductManagerment.Instance.SearchProductByStocks(stocks);
+        public bool AddNewProduct(Product product) => ProductManagerment.Instance.AddNewProduct(product);
+        public bool UpdateProduct(Product product) => ProductManagerment.Instance.UpdateProduct(product);
+        public bool DeleteProduct(int productId) => ProductManagerment.Instance.DeleteProduct(productId);
     }
 }

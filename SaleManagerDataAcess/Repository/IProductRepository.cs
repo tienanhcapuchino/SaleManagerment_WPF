@@ -10,6 +10,12 @@ namespace DataAcess.Repository
     public interface IProductRepository
     {
         List<Product> GetAllProducts();
-        List<Product> SearchProduct(int? id, string name, int? unitPrice, int? unitStocks);
+        List<Product> SearchProductById(int id);
+        List<Product> SearchProductByName(string name);
+        List<Product> SearchProductByPrice(int price);
+        List<Product> SearchProductByStocks(int stocks);
+        bool AddNewProduct(Product product);
+        bool UpdateProduct(Product product);
+        bool DeleteProduct(int productId);
     }
 }
