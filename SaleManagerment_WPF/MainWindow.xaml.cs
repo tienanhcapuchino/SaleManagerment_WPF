@@ -36,30 +36,6 @@ namespace SaleManagerment_WPF
             _productRepository = productRepository;
         }
 
-        private void dtbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-        public void LoadData(object sender, RoutedEventArgs e)
-        {
-            //try
-            //{
-            //dtbMembers.ItemsSource = _memberRepository.GetAllMembers();
-            //App app = new App();
-            //var user = App.Admin.Username;
-            //var pass = App.Admin.Password;
-            //if (user != null && pass != null)
-            //{
-            //    lbPassword.Content = pass;
-            //    lbUserName.Content = user;
-            //}
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-        }
-
         private void btLogin_Click(object sender, RoutedEventArgs e)
         {
             string username = tbUsername.Text;

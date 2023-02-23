@@ -80,7 +80,10 @@ namespace SaleManagerment_WPF
         }
         private void Load_Members(object sender, RoutedEventArgs e)
         {
-            dtgMember.ItemsSource = _memberRepository.GetAllMembers();
+            var list = _memberRepository.GetAllMembers();
+            lbWelcome.Content = "Welcome Admin " + _username;
+            if (list.Any())
+                dtgMember.ItemsSource = list;
         }
 
         private void bt_UpdateMem_Click(object sender, RoutedEventArgs e)

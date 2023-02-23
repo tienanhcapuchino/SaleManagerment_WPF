@@ -39,7 +39,9 @@ namespace SaleManagerment_WPF
         private void Manager_Window_Load(object sender, EventArgs e)
         {
             lbWelcome.Content = "Welcome Admin: " + _username;
-            dtgProducts.ItemsSource = _productRepository.GetAllProducts();
+            var list = _productRepository.GetAllProducts();
+            if (list.Any())
+                dtgProducts.ItemsSource = list;
         }
 
         private void bt_SearchId_Click(object sender, RoutedEventArgs e)

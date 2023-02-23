@@ -10,5 +10,9 @@ namespace DataAcess.Repository
     public interface IOrderRepository
     {
         List<Order> GetByMemberId(int memberId);
+        List<Order> GetAllOrders();
+        bool CreateOrder(Order order);
+        bool DeleteOrder(int orderId);
+        bool UpdateOder(Order order);
     }
 }
